@@ -9,7 +9,7 @@
 
     
     <!-- Bootstrap CSS -->
-    <link href="/css/main.min.css" rel="stylesheet">
+    <link href="css/main.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -40,27 +40,84 @@
             </div>
         </div>
     </nav>
-    <main>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 col-md-6 align-self-center ps-5 pe-md-5 pt-5">
-                    <h1 class="main_title pl-5">A Simple Bookmark Manager</h1>
-                    <p class="main_description">
-                        A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.
-                    </p>
-                    <button class="btn btn-primary shadow m-2" type="button">Get it on Chrome</button>
-                    <button class="btn btn-light shadow m-2" type="button">Get it on Firefox</button>
-                   
-                </div>
-                <div class="col-12 col-md-6 right-img ps-md-5 pe-5 pt-5">                    
-                    <img class="img-fluid" src="resources/img/illustration-hero.svg" alt="Hero">
-                </div>
+    <div class="container-fluid">
+        <div class="row" id="main_content">
+            <div class="col-12 col-md-6 align-self-center ps-5 pe-md-5 pt-5">
+                <h1 class="main_title pl-5">A Simple Bookmark Manager</h1>
+                <p class="main_description">
+                    A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.
+                </p>
+                <button class="btn btn-primary shadow m-2" type="button">Get it on Chrome</button>
+                <button class="btn btn-light shadow m-2" type="button">Get it on Firefox</button>
+                
+            </div>
+            <div class="col-12 col-md-6 right-img ps-md-5 pt-5">                    
+                <img class="img-fluid" src="resources/img/illustration-hero.svg" alt="Hero">
             </div>
         </div>
-    </main>
-    
-    
 
+        <div class="row" id="features">
+            <div class="col-12 text-center mt-5 px-5">
+                <h2>Features</h2>
+                <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+            </div>
+            
+            <div class="col-12 mt-5 px-5 d-flex justify-content-center">
+                <div class="nav nav-tabs d-flex " id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-bookmarking-tab" data-bs-toggle="tab" data-bs-target="#nav-bookmarking" type="button" role="tab" aria-controls="nav-bookmarking" aria-selected="true">Simple Bookmarking</button>
+                    <button class="nav-link" id="nav-searching-tab" data-bs-toggle="tab" data-bs-target="#nav-searching" type="button" role="tab" aria-controls="nav-searching" aria-selected="false">Speedy Searching</button>
+                    <button class="nav-link" id="nav-sharing-tab" data-bs-toggle="tab" data-bs-target="#nav-sharing" type="button" role="tab" aria-controls="nav-sharing" aria-selected="false">Easy Sharing</button>
+                </div>                
+            </div>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-bookmarking" role="tabpanel" aria-labelledby="nav-bookmarking-tab">
+                    <div class="row">
+                        <div class="col-12 col-md-6 left-img pt-5">
+                            <img class="img-fluid p-5" src="resources/img/illustration-features-tab-1.svg" alt="First Feature">             
+                        </div>
+                        <div class="col-12 col-md-6 align-self-center p-5">   
+                            <h1 class="main_title">Bookmark in one click</h1>
+                            <p class="main_description">
+                                Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
+                            </p>
+                            <button class="btn btn-primary shadow m-2" type="button">More info</button> 
+                        </div>
+                    </div>                    
+                </div>
+                <div class="tab-pane fade" id="nav-searching" role="tabpanel" aria-labelledby="nav-searching-tab">
+                    <div class="row">
+                        <div class="col-12 col-md-6 left-img pt-5 text-center">
+                            <img class="img-fluid p-5" src="resources/img/illustration-features-tab-2.svg" alt="Second Feature">             
+                        </div>
+                        <div class="col-12 col-md-6 align-self-center p-5">   
+                            <h1 class="main_title">Intelligent search</h1>
+                            <p class="main_description">
+                                Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
+                            </p>
+                            <button class="btn btn-primary shadow m-2" type="button">More info</button> 
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="tab-pane fade" id="nav-sharing" role="tabpanel" aria-labelledby="nav-sharing-tab">
+                    <div class="row">
+                        <div class="col-12 col-md-6 left-img pt-5 text-center">
+                            <img class="img-fluid p-5" src="resources/img/illustration-features-tab-3.svg" alt="Third Feature">             
+                        </div>
+                        <div class="col-12 col-md-6 align-self-center p-5">   
+                            <h1 class="main_title">Share your bookmarks</h1>
+                            <p class="main_description">
+                                Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.
+                            </p>
+                            <button class="btn btn-primary shadow m-2" type="button">More info</button> 
+                        </div>
+                    </div>
+                        
+                </div>
+            </div>
+                 
+        </div>
+    </div>
 
     <script language="javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
