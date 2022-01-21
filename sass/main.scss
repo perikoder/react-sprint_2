@@ -1,0 +1,58 @@
+// Modify bootstrap color variables
+$primary: #5265E1;
+$secondary: #FA5959;
+
+.right-img {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.right-img::before {
+    content: "";
+    position: absolute;
+    width: 40%; 
+    padding-bottom: 40%;   
+    bottom: 0;
+    left: 30%;
+    background-color: $primary;
+    border-bottom-left-radius: 100%;
+    border-top-left-radius: 100%;
+    z-index: -1;
+}
+
+.right-img::after {
+    content: "";
+    position: absolute;
+    width: 100%; 
+    padding-bottom: 40%;
+    bottom: 0;
+    left: 50%;
+    margin-right: -100%;
+    background-color: $primary;
+    z-index: -1;
+}
+
+.container-fullwidth {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.nav-button {
+    @extend .btn;
+    @extend .btn-secondary;
+    @extend .shadow;
+    @extend .text-light;
+}
+
+.nav-link {        
+    &.active {
+        @extend .btn;
+        @extend .btn-secondary;
+        @extend .shadow;
+        @extend .text-light;
+    }
+}
+//import bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
+
