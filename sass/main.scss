@@ -133,14 +133,158 @@ $secondary: #FA5959;
 
 }
 
+.accordion-wrapper {
 
+    & > element {
+        border-width: 0px 0px 1px 0px;
+        border-style: solid;
+        border-color: rgba(0,0,0,0.125);
+    }
 
-.nav-button {
-    @extend .btn;
-    @extend .btn-secondary;
-    @extend .shadow;
-    @extend .text-light;
+    &:first-child {
+        border-width: 1px 0px 1px 0px;
+        border-style: solid;
+        border-color: rgba(0,0,0,0.125);
+    }
 }
+.card.faq-single-container {
+    border-width: 0px 0px 1px 0px;
+}
+
+.faq-question {
+    color: $body-color;
+    padding: 1em;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: left;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+
+    &:hover {
+        color: $secondary;
+    }
+
+    &:after {
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900;
+        font-size: 1.5rem;
+        color: $primary;
+        content: "\f107";
+        float: right;
+    }
+
+    &[aria-expanded="true"]:after {
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900;
+        font-size: 1.5rem;
+        color: $secondary;
+        content: "\f106";
+        float: right;
+    }    
+}
+
+.main-footer {
+    color: white;
+    background-color: $primary;
+    padding: 2.5rem;
+    width: 100%;
+
+    > .footer-message {
+        font-family: monospace;
+    }
+
+    > .footer-title {
+        font-size: 2rem;
+    }
+
+}
+
+.footer-navbar {
+    padding: 1.2rem;
+    background-color: #11173a;
+    color: $white;
+}
+
+.footer-nav {
+    line-height: 1.5em;
+
+    & .footer-link {
+        vertical-align:sub;
+        color: $white;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+
+    .footer-item {
+        text-align: center;
+        padding-top: 1.5em;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0px;
+    }
+
+    .footer-link {
+        margin-top: 1.5rem;
+    }
+
+    
+
+}
+
+@include media-breakpoint-down(sm) {
+    .contact-button {
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+.invalid-feedback.custom-invalid {
+    margin-top: 0px;
+    background-color: $secondary;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+}
+
+.nav-secondary-button {
+    // @extend .btn;
+    box-shadow: 0 .5rem 1rem rgba($primary, .15);
+    display: inline-block;
+    line-height: 1.5;
+    text-align: center;
+    color: $white;
+    background-color: $secondary;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    padding: 0.375rem 0.75rem;
+
+    &:hover {
+        box-shadow: 0 .5rem 1rem rgba($primary, .15);
+        border: 2px solid $secondary;
+        background-color: white;
+        color: $secondary;
+        font-weight: 600;
+    }
+}
+
+
+
 
 .features_nav {
     line-height: 1rem;
@@ -149,3 +293,8 @@ $secondary: #FA5959;
 //import bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
 
+.was-validated .form-control:invalid {
+    border-color: $secondary;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
